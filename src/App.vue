@@ -10,7 +10,7 @@
             <BillsTable :bills="bills" v-on:triggerShowAddBill="triggerShowAddBill" v-on:removeBill="removeBill" />
           </div>
           <div class="w-1/2">
-            <Chart />
+            <Chart :bills="bills" />
           </div>
         </div>
       </div>
