@@ -14,7 +14,7 @@
           </select>
 
           <input class="shadow appearance-none border rounded w-full py-2 px-3 mr-4 text-grey-darker" placeholder="Set amount" v-model="amount">
-          <button class="flex-no-shrink p-2 border-2 rounded bg-teal text-white border-teal hover:text-white hover:bg-teal" @click="handleClick">Add</button>
+          <button class="flex-no-shrink p-2 border-2 rounded bg-teal-300 text-white border-teal hover:text-white hover:bg-teal-200" @click="handleClick">Add</button>
         </div>
       </div>
     </div>
