@@ -18,6 +18,7 @@
                 <td>{{bill.date | moment("MMM D YYYY")}}</td>
                 <td>{{bill.amount}}</td>
                 <td>{{bill.category}}</td>
+                <td><button @click=removeBill(index)>X</button></td>
             </tr>
         </tbody>
     </table>
@@ -29,6 +30,9 @@ export default {
     methods: {
         triggerShowAddBill: function() {
             this.$emit('triggerShowAddBill')
+        },
+        removeBill: function(index) {
+            this.$emit('removeBill', index)
         }
     }
 }
