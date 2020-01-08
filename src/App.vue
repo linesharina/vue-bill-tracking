@@ -19,11 +19,14 @@
 </template>
 
 <script>
+import Vue from 'vue'
 import AddBill from './components/AddBill.vue'
 import AddCategory from './components/AddCategory.vue'
 import BillsTable from './components/BillsTable'
 import Chart from './components/Chart'
 import NavBar from './components/NavBar'
+
+Vue.use(require('vue-moment'))
 
 export default {
   name: 'app',
