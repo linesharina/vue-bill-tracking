@@ -1,6 +1,6 @@
 <template>
     <table class="table">
-        <thead class="bg-blue text-white">
+        <thead class="bg-blue-500 text-white">
             <tr>
                 <th scope="col">Date</th>
                 <th scope="col">Amount</th>
@@ -9,8 +9,13 @@
             </tr>
         </thead>
         <tbody>
+            <tr class="p-4 bg-blue-300 text-center">
+                <td colspan="4">
+                    <button class="underline" @click="triggerShowAddBill">Add new</button>
+                </td>
+            </tr>
             <tr v-for="(bill, index) in bills" :key="index" class="p-4">
-                <td>{{bill.date}}</td>
+                <td>{{bill.date | moment("MMM D YYYY")}}</td>
                 <td>{{bill.amount}}</td>
                 <td>{{bill.category}}</td>
             </tr>
@@ -20,6 +25,11 @@
 <script>
 export default {
     name: 'BillsTable',
-    props: ['bills']
+    props: ['bills'],
+    methods: {
+        triggerShowAddBill: function() {
+            this.$emit('triggerShowAddBill')
+        }
+    }
 }
 </script>
